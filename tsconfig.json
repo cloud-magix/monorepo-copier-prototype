@@ -1,0 +1,7 @@
+{
+    "files": [],
+    "references": [
+      { "path": "libs/lib-a" },
+      { "path": "libs/lib-b" }
+    ]
+}

@@ -1,0 +1,78 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/run
+/dist
+/tmp
+/out-tsc
+**/report*.json
+**/report*.xml
+**/*report.xml
+tsconfig.tsbuildinfo
+
+# dependencies
+**/node_modules/**
+**/.serverless/
+**/.webpack/
+
+# IDEs and editors
+/.idea
+*.iml
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# npmrc
+.npmrc
+pip.conf
+
+#yarnrc
+.yarnrc
+
+.vscode/settings.json
+.vscode/extensions.json
+.vscode/launch.json
+
+# Serverless
+.serverless
+.webpack
+node_modules
+dist
+
+# Sonar Workspace
+/.scannerwork
+workspace copy.json
+apps/abound-virtual-snapshot-gql/env/dm-us-east-1.yml
+test-report.xml
+coverage
+
+# Python pipenv
+.venv
+__pycache__
+
+# direnv
+.envrc

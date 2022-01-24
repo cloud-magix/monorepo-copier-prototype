@@ -1,0 +1,15 @@
+{
+    "extends": "@tsconfig/recommended/tsconfig.json",
+    "compilerOptions": {
+      "declaration": true,
+      "declarationMap": true,
+      "sourceMap": true,
+      "composite": true,
+      "incremental": true,
+      "baseUrl": ".",
+      "paths": {
+        "@cloud-magix/lib-a": ["libs/lib-a/src"],
+        "@cloud-magix/lib-b": ["libs/lib-b/src"]
+      }
+    },
+}

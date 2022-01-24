@@ -1,0 +1,47 @@
+{
+  "name": "mono-repo-prototype",
+  "version": "0.0.0",
+  "author": "Carrier Digital",
+  "license": "Carrier",
+  "workspaces": [
+    "libs/**",
+    "services/**"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.1.0",
+    "@commitlint/config-conventional": "^16.0.0",
+    "@digitalroute/cz-conventional-changelog-for-jira": "^7.0.0",
+    "@monorepo-utils/workspaces-to-typescript-project-references": "^2.7.4",
+    "@tsconfig/recommended": "^1.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.10.1",
+    "@typescript-eslint/parser": "^5.10.1",
+    "commitizen": "^4.2.4",
+    "eslint": "^8.7.0",
+    "husky": "^7.0.0",
+    "multi-semantic-release": "^2.11.0",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/@digitalroute/cz-conventional-changelog-for-jira",
+      "jiraOptional": true
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "subject-case": [
+        0,
+        "always",
+        []
+      ]
+    }
+  }
+}
