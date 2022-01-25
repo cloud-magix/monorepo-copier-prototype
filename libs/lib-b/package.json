@@ -1,6 +1,6 @@
 {
     "name": "cloud-magix-lib-b",
-    "version": "1.0.0",
+    "version": "0.1.0",
     "description": "Test Library B",
     "author": "Kory Taborn",
     "license": "MIT",
@@ -8,6 +8,6 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "dependencies": {
-        "cloud-magix-lib-a": "0.0.0"
+        "cloud-magix-lib-a": "0.1.0"
     }
 }
