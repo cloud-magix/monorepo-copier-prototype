@@ -8,8 +8,8 @@
       "incremental": true,
       "baseUrl": ".",
       "paths": {
-        "@cloud-magix/lib-a": ["libs/lib-a/src"],
-        "@cloud-magix/lib-b": ["libs/lib-b/src"]
+        "cloud-magix-lib-a": ["libs/lib-a/src"],
+        "cloud-magix-lib-b": ["libs/lib-b/src"]
       }
     },
 }

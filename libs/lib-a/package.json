@@ -1,6 +1,6 @@
 {
-  "name": "@cloud-magix/lib-a",
-  "version": "0.0.1",
+  "name": "cloud-magix-lib-a",
+  "version": "0.0.2",
   "description": "Test Library A",
   "author": "Kory Taborn",
   "license": "MIT",
