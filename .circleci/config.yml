@@ -9,12 +9,30 @@ jobs:
     steps:
       - checkout
       - run:
-          name: aws-assume Help
+          name: Generate Assumed Role Credentials
           command: |
             env >> .env
-            $(docker run --env-file .env brutalsimplicity/cicd-tools:latest aws-assume --role $DEPLOYMENT_ROLE -e)
-            env
-            aws s3 ls
+            mkdir .secrets
+            docker run --env-file .env brutalsimplicity/cicd-tools:latest aws-assume --role $DEPLOYMENT_ROLE -e >> .secrets/.env
+
+      - persist_to_workspace:
+          root: '.'
+          paths:
+            - .secrets
+
+  verify:
+    machine:
+      image: ubuntu-2004:202101-01
+    resource_class: medium
+    steps:
+      - attach_workspace:
+          at: /tmp/workspace
+      - run:
+          name: Verify Credentials
+          working_directory: /tmp/workspace
+          command: |
+            $(cat .secrets/.env)
+            aws sts get-caller-identity
 
 workflows:
   build:
@@ -22,3 +40,7 @@ workflows:
       - assume_role:
           name: Assume AWS Deployment Role
           context: cloud-magix
+      - verify:
+          requires:
+            - Assume AWS Deployment Role
+          name: Verify Assume Role
