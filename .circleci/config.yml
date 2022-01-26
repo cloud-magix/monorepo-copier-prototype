@@ -11,7 +11,8 @@ jobs:
       - run:
           name: aws-assume Help
           command: |
-            $(docker run brutalsimplicity/cicd-tools:latest aws-assume --role $DEPLOYMENT_ROLE -e)
+            env >> .env
+            $(docker run --env-file .env brutalsimplicity/cicd-tools:latest aws-assume --role $DEPLOYMENT_ROLE -e)
             env
             aws s3 ls
 
