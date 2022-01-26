@@ -3,12 +3,11 @@ version: 2.1
 
 jobs:
   assume_role:
-    docker:
-      - image: brutalsimplicity/cicd-tools:v1.0.0
+    machine:
+      image: ubuntu-2004:202101-01
+    resource_class: medium
     steps:
       - checkout
-      - setup_remote_docker:
-          version: 20.10.11
       - run:
           name: aws-assume Help
           command: |
