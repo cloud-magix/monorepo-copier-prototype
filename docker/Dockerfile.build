@@ -1,0 +1,16 @@
+FROM amazonlinux:2
+
+RUN curl --silent --location https://rpm.nodesource.com/setup_14.x | bash -
+RUN yum -y install nodejs
+RUN yum -y install openssh-server openssh-clients
+RUN yum -y install tar
+RUN yum install gcc openssl-devel bzip2-devel libffi-devel
+RUN cd /tmp && sudo wget https://www.python.org/ftp/python/3.9.6/Python-3.9.6.tgz && \
+    tar xzf Python-3.9.6.tgz
+# RUN python -m ensurepip && \
+#     pip install --upgrade pip && \
+#     pip install awscli
+RUN npm install -g npm@latest \
+    yarn
+
+WORKDIR /workspace
