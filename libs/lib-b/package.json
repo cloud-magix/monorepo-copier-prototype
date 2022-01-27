@@ -5,7 +5,10 @@
     "author": "Kory Taborn",
     "license": "MIT",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "npx jest",
+        "clean": "rimraf dist *.tsbuildinfo",
+        "prebuild": "npm run clean",
+        "build": "tsc -p tsconfig.lib.json"
     },
     "dependencies": {
         "cloud-magix-lib-a": "0.1.0"

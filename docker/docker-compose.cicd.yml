@@ -1,0 +1,7 @@
+version: "3.5"
+services:
+  build_project:
+    image: brutalsimplicity/prototype:latest
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile.build
