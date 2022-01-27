@@ -8,7 +8,7 @@
 **/report*.json
 **/report*.xml
 **/*report.xml
-tsconfig.tsbuildinfo
+*.tsbuildinfo
 
 # dependencies
 **/node_modules/**
